@@ -26,10 +26,10 @@ function showSlides(n) {
 
 function imgChange(n) {
   var imgchange=document.getElementsByClassName('imgchange');
-  imgchange[n-1].src="C:\\Users\\user\\Desktop\\Training\\images"+(n+3)+".png";
+  imgchange[n-1].src="C:\\Users\\user\\Desktop\\Training\\images\\img"+(n+3)+".png";
 }
 
 function imgReset(n) {
   var imgreset=document.getElementsByClassName('imgchange');
-  imgreset[n-1].src="C:\\Users\\user\\Desktop\\Training\\images"+n+".png";
+  imgreset[n-1].src="C:\\Users\\user\\Desktop\\Training\\images\\img"+n+".png";
 }
