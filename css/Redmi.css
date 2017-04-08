@@ -104,57 +104,68 @@ p{
 
 /*Header Bottom*/
 .back-img{
-  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat left center;
-  height: 900px
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat 10% center;
+  min-height: 900px
 }
 
 .nav4-content{
-  margin: 190px 0 0 750px;
-  width: 410px;
+  text-align: center;
+  margin: 190px auto 0;
+  max-width: 410px;
 }
 
 .nav4-content h1{
   font-size: 4.2em
 }
 
-.nav4-content h1 span,.nav4-price-content span h1{
+.nav4-content h1 span,.nav4-price-content h1{
+  text-align: left;
   color: #e53935
 }
 
-.nav4-content h3,.nav4-price-content span h1{
+.nav4-content h3,.nav4-price-content h1{
   font-size: 3.1em
 }
 
 .nav4-content p{
+  text-align: center;
   font-size: 1.1em;
   line-height: 1.87em
 }
 
-.nav4-price-content span h1 i{
+.nav4-price-content h1 i{
   padding: 0 10px 0 0;
   font-size: .5em
 }
 
-.nav4-price-content span p{
+.nav4-price-content p{
+  text-align: justify;
   font-size: .9em
 }
 
-.nav4-price-content{
+/*.nav4-price-content{
   display: flex;
   flex-direction: row;
-}
+}*/
 
 .divider{
-  border: 1px solid #cdcdcd;
-  margin: 25px 30px 0;
-  height: 100px
+  width: 1%;
+  padding: 0;
+  margin: 0;
+  border-color: #cdcdcd;
+  min-height: 130px;
 }
 
 /*Section 1*/
+.sec1{
+  background: #fafafa
+}
+
 .sec1-content{
-  margin: 200px 0 0 180px;
-  width: 392px;
-  height: 480px;
+  padding: 0 10px;
+  margin: 200px auto 0;
+  max-width: 392px;
+  min-height: 480px;
 }
 
 .bck-img1{
@@ -191,6 +202,7 @@ p{
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat -400px;
 }
+/*
 .sec1-content2{
   display: flex;
   flex-direction: row;
@@ -198,27 +210,30 @@ p{
 
 .sec1-content2 span{
   margin: 0 50px
-}
+}*/
 
-.sec1-content2 span h4,.sec1-content2 span p{
+.sec1-content2 h4,.sec1-content2 p{
   text-align: center;
 }
-.sec1-content2 span p{
+.sec1-content2 p{
   font-size: .9em
 }
 
-.sec1-content2 span i{
+.sec1-content2 i{
   margin: 0 auto 20px;
 }
 
 /*Section 2*/
-.back-img2{
-  height: 1150px;
+.sec2-bgimg{
+  min-height: 1150px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-mi3s.jpg?v=20170802) #fafafa no-repeat center bottom;
 }
 
 .sec2-content{
-  margin: 180px 0 50px;
+  padding: 0 10px;
+  margin: 180px auto 50px;
+  max-width: 800px;
+  min-height: 245px;
 }
 
 .sec2-content h3,.sec2-content p{
@@ -241,7 +256,7 @@ p{
   color: white
 }
 
-.sec3-content ul{
+/*.sec3-content ul{
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -250,11 +265,13 @@ p{
 }
 
 .sec3-content ul li{
-  font-size: 1.3em;
   padding: 0 20px
-}
+}*/
 
-.sec3-content ul li a{
+.sec3-content a{
+  display: block;
+  text-align: center;
+  font-size: 1.3em;
   text-decoration: none;
   color: #666
 }
@@ -262,7 +279,7 @@ p{
 .slider{
   padding: 0;
   position: relative;
-  height: 540px;
+  min-height: 180px;
   background: black;
   color: white
 }
@@ -272,23 +289,26 @@ p{
 }
 
 .slides-content{
-  width: 360px;
+  padding: 0 10px;
+  text-align: justify;
+  max-width: 360px;
   margin: 170px auto 0;
 }
 
 .slides-video{
-  height: 540px;
+  padding: 0;
+  min-height: 180px;
   overflow: hidden;
-
 }
 
 .slides-video video{
   margin: 0 0 0 -100px;
   width: 960px;
-  height: inherit;
+  height: auto;
 }
 
 .prev,.next{
+  display: block;
   position: absolute;
   left: 0;
   top: 45%;
@@ -312,7 +332,7 @@ p{
 }
 
 .next{
-  left: 95%
+  left: 95%;
 }
 
 .links:focus{
@@ -365,6 +385,7 @@ p{
 
 .sec4-content-bgimg ul li{
   margin: 0 50px 0 0;
+
 }
 */
 
@@ -377,7 +398,7 @@ p{
   background: #9b6133;
 }
 
-.data2::before{
+.sec4-content-bgimg p:nth-of-type(2)::before{
   content: "";
   margin: 0 10px 0 0;
   display: inline-block;
@@ -766,6 +787,14 @@ footer h3{
 }
 
 @media screen and (max-width: 768px) {
+  .sec2-bgimg{
+    background-size: 75%;
+  }
+
+  .sec2-content p{
+    text-align: justify;
+  }
+
   .sec4-content{
     margin: 0;
   }
@@ -832,7 +861,25 @@ footer h3{
   }
 }
 
+@media screen and (max-width: 991px){
+  .back-img{
+    background-size: 50%;
+    background-position: 5% bottom;
+  }
 
+  .sec3-content{
+    padding: 60px 0 ;
+  }
+
+  .slides-content{
+    margin: 80px auto;
+  }
+
+  .slides-video video{
+    max-width: 100%;
+    margin: 0;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .sec7-bgimg{
@@ -853,5 +900,16 @@ footer h3{
 
   .sec11-content,.sec11-content p{
     color: #e53935;
+  }
+}
+
+@media screen and (min-width: 1290px) {
+  .slides-video video{
+    float: right;
+  }
+
+  .slides-float video{
+    margin: 0;
+    float: left;
   }
 }
