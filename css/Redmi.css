@@ -25,7 +25,7 @@ p{
 /*Header*/
 /*Navigation Top*/
 .nav1{
-    background-color: black;
+  background-color: black;
 }
 
 .nav1bar{
@@ -34,72 +34,92 @@ p{
   border-color: transparent;
 }
 
+.nav1brand-divider{
+  border: 1px solid transparent;
+  border-left-color: #424242;
+  border-right-color: #424242;
+}
+.nav1brand i{
+  font-size: 1.4em;
+  margin: 0 8px 0 0;
+}
+
 .nav1brand{
-  font-size: .8em
-}
-
-.nav1-right{
-  margin: 0 0 0 800px
-}
-
-/*Navigation Middle*/
-.logo-slide{
-  margin: 0 60px 0 0;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #b0b0b0;
   display: block;
+  font-size: .8em;
+}
+
+.nav1brand:hover{
+  text-decoration: none;
+  color: #f5f5f5;
+}
+/*Navigation Middle*/
+
+.logo-slide{
+  cursor: pointer;
+  margin: 0;
+  display: inline-block;
   width: 56px;
   height: 56px;
-  background: url(//i01.appmifile.com/webfile/globalimg/pandora/mihome.png) no-repeat;
-  background-position: -56px;
+  background: url(http://i01.appmifile.com/webfile/globalimg/pandora/mihome.png) no-repeat -56px;
+  transition: background-position 0.2s;
+}
+
+.logo-slide:hover{
+  background-position: 0;
 }
 
 .nav2bar{
   background: transparent;
   border-color: transparent;
-  margin: 0
+  margin: 12px 35px;
 }
 
-.nav2brand{
+.nav2brand>li>a{
+  color: #616161;
   font-size: .9em;
   font-weight: bold;
-  padding: 20px 35px
+  padding: 20px 0 20px 60px;
 }
 
-.nav2brand:hover{
-  color: orange
+.nav2brand>li>a:hover{
+  cursor: default;
+  color: orange;
 }
 
 /*Navigation Bottom*/
 .nav3{
+  top: 0;
+  width: 100%;
   background: #f5f5f5;
 }
 
+.nav3-header span{
+}
+
 .nav3bar{
+  color: #333;
   margin: 5px 0;
   background: transparent;
   border-color:transparent
 }
 
-.nav3-right .nav3brand{
-  color: #333;
+.nav3brand{
   font-size: .9em;
-  padding: 20px 30px;
-
 }
 
-.nav3-logo h3{
+.nav3-logo{
   margin: 0;
   font-size: 1.3em;
-  color:black;
-}
-
-.nav3-right{
-  margin: 0 0 0 430px
 }
 
 .btn-orange span{
   background: #ff6700;
   color: white;
-  padding: 5px 15px
+  padding: 6px 12px
 }
 
 /*Header Bottom*/
@@ -882,6 +902,16 @@ footer h3{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav2bar{
+    margin: 12px 0;
+  }
+
+  .nav2brand>li>a{
+    font-size: .8em;
+    padding: 20px 12px;
+  }
+}
+
   .sec7-bgimg{
     background-position: 58% bottom;
   }
@@ -902,6 +932,9 @@ footer h3{
     color: #e53935;
   }
 }
+
+
+
 
 @media screen and (min-width: 1290px) {
   .slides-video video{
