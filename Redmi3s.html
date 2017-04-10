@@ -8,14 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Redmi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/Redmi3s.js"></script>
   </head>
   <body onload="currentSlides(0);">
 
-    <!--
+
     <header>
+
       <section class="nav1">
         <div class="container-fluid">
+
+          <nav class="navbar-inverse">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+              <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+                  <a class="nav1brand text-right" href="#">MI INDIA</a>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                  <a class="nav1brand nav1brand-divider text-center" href="#">MIUI</a>
+                </div>
+                <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4">
+                  <a class="nav1brand text-left" href="#">DOWNLOAD MI STORE APP</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-2 col-lg-5">
+              <div class="row">
+                <div class="col-xs-4 col-sm-offset-2 col-sm-3 col-md-offset-4 col-md-2 col-lg-offset-5 col-lg-2">
+                  <a class="text-right nav1brand" href="#">SIGN IN</a>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
+                  <a class="text-center nav1brand nav1brand-divider" href="#">SIGN UP</a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                  <a class="text-left nav1brand dropdown" href="#"><i class="fa fa-cart-plus"></i>CART(0)
+                    <div class="dropdown-menu dropdown-menu-right">
+                      Your Cart is Empty
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </nav>
+
+
+          <!--
           <nav class="navbar navbar-default nav1bar">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -44,10 +86,44 @@
     </div>
   </div>
 </nav>
+-->
         </div>
       </section>
+
+
       <section class="nav2">
         <div class="container-fluid">
+
+            <nav class="navbar navbar-default nav2bar">
+              <div class="container-fluid">
+
+                <div class="navbar-header">
+                  <i class="navbar-brand logo-slide"></i>
+                  <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav2-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <div id="nav2-nav" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav pull-right  nav2brand">
+                    <li><a class="navbar-brand" href="#">Mi Phones</a></li>
+                    <li><a class="navbar-brand" href="#">Redmi Phones</a></li>
+                    <li><a class="navbar-brand" href="#">Audio</a></li>
+                    <li><a class="navbar-brand" href="#">Smart Devices</a></li>
+                    <li><a class="navbar-brand" href="#">Mi Power Bank</a></li>
+                    <li><a class="navbar-brand" href="#">Accessories</a></li>
+                    <li><a class="navbar-brand" href="#">Mi Protect</a></li>
+                    <li><a class="navbar-brand" href="#">Mi Community</a></li>
+                    <li><a class="navbar-brand" href="#">Support</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </nav>
+
+  <!--
           <nav class="navbar navbar-default nav2bar">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -82,11 +158,47 @@
     </div>
   </div>
 </nav>
+
+-->
+
         </div>
       </section>
 
-<section class="nav3">
+
+<section class="nav3" data-spy="affix" data-offset-top="145">
   <div class="container-fluid">
+
+    <nav class="navbar navbar-default nav3bar">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+              <span class="navbar-brand">Redmi 3S</span>
+              <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav3-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+        </div>
+
+        <div id="nav3-nav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a class="active nav3brand" href="#">Overview</a></li>
+            <li><a class="nav3brand" href="#">Camera</a></li>
+            <li><a class="nav3brand" href="#">MIUI</a></li>
+            <li><a class="nav3brand" href="#">Specs</a></li>
+            <li><a class="nav3brand" href="#">Review</a></li>
+            <li><a class="nav3brand" href="#">Mi Protect</a></li>
+            <li><a class="nav3brand" href="#">F-code</a></li>
+            <li><a class="btn-orange" href="#"><span>Buy now</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+
+    <!--
     <nav class="navbar navbar-default nav3bar">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -122,6 +234,7 @@
     </div>
   </div>
 </nav>
+-->
   </div>
 </section>
 
@@ -162,7 +275,6 @@
   </div>
 
 
-
   <!--
 <div class="row">
   <div class="col-md-12 back-img img-responsive">
@@ -193,6 +305,7 @@
 -->
 </div>
 </section>
+
     </header>
 
     <!-- Section1-->
