@@ -34,18 +34,33 @@ p{
   border-color: transparent;
 }
 
-.nav1brand-divider{
-  border: 1px solid transparent;
-  border-left-color: #424242;
-  border-right-color: #424242;
+.nav1brand-divider::before{
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  background: #424242;
+  width: 1px;
+  height: 14px;
 }
+
+.nav1brand-divider::after{
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  background: #424242;
+  width: 1px;
+  height: 14px;
+}
+
 .nav1brand i{
   font-size: 1.4em;
   margin: 0 8px 0 0;
 }
 
 .nav1brand{
-  padding: 12px 0;
+  line-height: 40px;
   text-decoration: none;
   color: #b0b0b0;
   display: block;
@@ -55,6 +70,33 @@ p{
 .nav1brand:hover{
   text-decoration: none;
   color: #f5f5f5;
+}
+
+.cart-dropdown:hover{
+  background: white;
+  color: #ff6700;
+}
+
+.cart-dropdown:hover .cart-dropdown-menu{
+  display: block;
+  animation: cart-dropdown-menu-auto-height 1s ease
+}
+
+.cart-dropdown-menu{
+  color: #757575;
+  height: 94px;
+  margin: 0;
+  border-color: transparent;
+  line-height: 80px;
+  min-width: 300px;
+  text-align: center;
+  border-radius: 0;
+  transition: display 1s ease;
+}
+
+@keyframes cart-dropdown-menu-auto-height {
+  from{height: 0;padding: 0}
+  to{height: 94px;}
 }
 /*Navigation Middle*/
 
@@ -122,6 +164,33 @@ p{
   padding: 6px 12px
 }
 
+.product-exhibit{
+  background: white;
+  z-index: 10;
+  position: absolute;
+  top: 122px;
+  left: 0;
+  width: 100%;
+  height: 242px;
+}
+
+.product-exhibit a:hover,.product-exhibit a{
+  font-size: 1.3em;
+  text-decoration: none;
+  color: black
+}
+
+.product-exhibit p{
+  font-size: .9em;
+  color: #ff6700;
+  margin: 0;
+  text-align: center;
+}
+
+.product-exhibit img{
+  display: block;
+  margin: 0 auto;
+}
 /*Header Bottom*/
 .back-img{
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat 10% center;
@@ -439,28 +508,34 @@ p{
   max-width: 425px;
 }
 
-/*Section 6*/
-.sec6-bgimg{
+/*Camera Section*/
+.section-camera-bgimg{
   min-height: 1055px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-blur-bg.jpg?v=20170802) no-repeat center;
+  transition: all 1s;
 }
 
-.sec6-content{
+.section-camera-content{
+  opacity: 0;
   padding: 0 10px;
   margin: 180px auto 0;
   color: white;
   max-width: 792px;
   min-height: 245px;
+  transition: opacity 1.5s;
 }
 
-.sec6-content p,.sec6-content h3{
+.section-camera-content p,.section-camera-content h3{
   text-align: center;
 }
 
-.sec6-img{
+.section-camera-productimg{
+  opacity: 0;
   display: block;
-  margin: 70px auto 0;
+  margin: 0 auto;
   height: 396px;
+  transform: translate3d(0,-50px,0)
+  transition: all 1s;
 }
 
 /*Section 7*/
@@ -771,7 +846,7 @@ footer h3{
 
 /*Media Queries*/
 @media screen and (max-width: 362px) {
-  .sec6-img{
+  .section-camera-productimg{
     height: 340px;
   }
 
@@ -869,7 +944,7 @@ footer h3{
 }
 
 @media screen and (max-width: 820px) {
-  .sec6-img{
+  .section-camera-productimg{
     padding: 50px 0 0;
     margin: 0 auto;
   }

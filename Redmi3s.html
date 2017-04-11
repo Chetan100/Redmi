@@ -12,7 +12,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Redmi3s.js"></script>
   </head>
-  <body onload="currentSlides(0);">
+  <body onload="currentSlides(0);section_camera_animation();">
 
 
     <header>
@@ -45,8 +45,8 @@
                   <a class="text-center nav1brand nav1brand-divider" href="#">SIGN UP</a>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
-                  <a class="text-left nav1brand dropdown" href="#"><i class="fa fa-cart-plus"></i>CART(0)
-                    <div class="dropdown-menu dropdown-menu-right">
+                  <a class="text-left nav1brand dropdown cart-dropdown" href="#"><i class="fa fa-cart-plus"></i>CART(0)
+                    <div class="dropdown-menu dropdown-menu-right cart-dropdown-menu">
                       Your Cart is Empty
                     </div>
                   </a>
@@ -108,7 +108,7 @@
 
                 <div id="nav2-nav" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav pull-right  nav2brand">
-                    <li><a class="navbar-brand" href="#">Mi Phones</a></li>
+                    <li><a class="navbar-brand " href="#">Mi Phones</a></li>
                     <li><a class="navbar-brand" href="#">Redmi Phones</a></li>
                     <li><a class="navbar-brand" href="#">Audio</a></li>
                     <li><a class="navbar-brand" href="#">Smart Devices</a></li>
@@ -122,6 +122,34 @@
 
               </div>
             </nav>
+
+            <div class="product-exhibit">
+              <div class="row">
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1467273554.27871565.jpg?width=140&height=140" alt="Mi Max"></a>
+                  <p><a href="#">Mi Max</a></p>
+                  <p>From <i class="fa fa-rupee"></i> 14,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/Product/mi5/mi5p.jpg?width=140&height=140" alt="Mi 5"></a>
+                  <p><a href="#">Mi 5</a></p>
+                  <p><i class="fa fa-rupee"></i> 22,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/T1O8_QB4VT1RXrhCrK.jpg?width=140&height=140" alt="Mi 4"></a>
+                  <p><a href="#">Mi 4</a></p>
+                  <p><i class="fa fa-rupee"></i> 10,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/sg/product/mi4i__800x800.jpg?width=140&height=140" alt="Mi 4i"></a>
+                  <p><a href="#">Mi 4i</a></p>
+                  <p><i class="fa fa-rupee"></i> 11,999</p>
+                </div>
+              </div>
+            </div>
+
+
+
 
   <!--
           <nav class="navbar navbar-default nav2bar">
@@ -673,12 +701,12 @@
     </section>
 
 
-    <!--Section6-->
-    <section class="sec6-bgimg img-responsive">
+    <!--Camera Section-->
+    <section class="section-camera-bgimg img-responsive">
       <div class="container-fluid">
 
         <div class="row">
-          <div class="sec6-content">
+          <div class="section-camera-content">
             <h3>13MP PDAF Camera <br>
               0.1s ultra-fast focusing
             </h3>
@@ -689,10 +717,10 @@
 
         <div class="row">
           <div class="hidden-xs col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802" alt="PDAF-image" class="sec6-img">
+            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802" alt="PDAF-image" class="section-camera-productimg">
           </div>
           <div class="visible-xs col-xs-offset-1 col-xs-10">
-            <img src="C:\Users\user\Desktop\Training\images\pdaf_img.png" alt="PDAF-image" class="sec6-img">
+            <img src="C:\Users\user\Desktop\Training\images\pdaf_img.png" alt="PDAF-image" class="section-camera-productimg">
           </div>
         </div>
 
