@@ -23,18 +23,18 @@ p{
   text-align: justify;
 }
 /*Header*/
-/*Navigation Top*/
-.nav1{
+/*Navbar Top*/
+.navbar-top-container{
   background-color: black;
 }
 
-.nav1bar{
+/*.nav1bar{
   margin: 0;
   background: transparent;
   border-color: transparent;
-}
+}*/
 
-.nav1brand-divider::before{
+.navbar-top-navlink-divider::before{
   content: "";
   position: absolute;
   top: 13px;
@@ -44,7 +44,7 @@ p{
   height: 14px;
 }
 
-.nav1brand-divider::after{
+.navbar-top-navlink-divider::after{
   content: "";
   position: absolute;
   top: 13px;
@@ -54,12 +54,12 @@ p{
   height: 14px;
 }
 
-.nav1brand i{
+.navbar-top-navlink i{
   font-size: 1.4em;
   margin: 0 8px 0 0;
 }
 
-.nav1brand{
+.navbar-top-navlink{
   line-height: 40px;
   text-decoration: none;
   color: #b0b0b0;
@@ -67,22 +67,22 @@ p{
   font-size: .8em;
 }
 
-.nav1brand:hover{
+.navbar-top-navlink:hover{
   text-decoration: none;
   color: #f5f5f5;
 }
 
-.cart-dropdown:hover{
+.navbar-top-cart-dropdown:hover{
   background: white;
   color: #ff6700;
 }
 
-.cart-dropdown:hover .cart-dropdown-menu{
+.navbar-top-cart-dropdown:hover .navbar-top-cart-dropdown-menu{
   display: block;
   animation: cart-dropdown-menu-auto-height 1s ease
 }
 
-.cart-dropdown-menu{
+.navbar-top-cart-dropdown-menu{
   color: #757575;
   height: 94px;
   margin: 0;
@@ -98,9 +98,9 @@ p{
   from{height: 0;padding: 0}
   to{height: 94px;}
 }
-/*Navigation Middle*/
 
-.logo-slide{
+/*Navbar Middle*/
+.navbar-middle-logo-slide{
   cursor: pointer;
   margin: 0;
   display: inline-block;
@@ -110,61 +110,30 @@ p{
   transition: background-position 0.2s;
 }
 
-.logo-slide:hover{
+.navbar-middle-logo-slide:hover{
   background-position: 0;
 }
 
-.nav2bar{
+.navbar-middle-container{
   background: transparent;
   border-color: transparent;
   margin: 12px 35px;
 }
 
-.nav2brand>li>a{
+.navbar-middle-navcontent>li>a{
   color: #616161;
   font-size: .9em;
   font-weight: bold;
   padding: 20px 0 20px 60px;
 }
 
-.nav2brand>li>a:hover{
+.navbar-middle-navcontent>li>a:hover{
   cursor: default;
   color: orange;
 }
 
-/*Navigation Bottom*/
-.nav3{
-  top: 0;
-  width: 100%;
-  background: #f5f5f5;
-}
-
-.nav3-header span{
-}
-
-.nav3bar{
-  color: #333;
-  margin: 5px 0;
-  background: transparent;
-  border-color:transparent
-}
-
-.nav3brand{
-  font-size: .9em;
-}
-
-.nav3-logo{
-  margin: 0;
-  font-size: 1.3em;
-}
-
-.btn-orange span{
-  background: #ff6700;
-  color: white;
-  padding: 6px 12px
-}
-
-.product-exhibit{
+.navbar-middle-product-exhibit{
+  display: none;
   background: white;
   z-index: 10;
   position: absolute;
@@ -174,60 +143,101 @@ p{
   height: 242px;
 }
 
-.product-exhibit a:hover,.product-exhibit a{
+/*.navbar-middle-navlink:hover{
+  animation: navbar-middle-product-exhibit-auto-height 1s ease;
+}*/
+
+@keyframes navbar-middle-product-exhibit-auto-height {
+  from{height: 0;}
+  to{height: 242px;}
+}
+
+.navbar-middle-product-exhibit a:hover,.navbar-middle-product-exhibit a{
   font-size: 1.3em;
   text-decoration: none;
   color: black
 }
 
-.product-exhibit p{
+.navbar-middle-product-exhibit p{
   font-size: .9em;
   color: #ff6700;
   margin: 0;
   text-align: center;
 }
 
-.product-exhibit img{
+.navbar-middle-product-exhibit img{
   display: block;
   margin: 0 auto;
 }
+
+
+/*Navbar Bottom*/
+.navbar-bottom-container{
+  top: 0;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.navbar-bottom-nav-container{
+  color: #333;
+  margin: 5px 0;
+  background: transparent;
+  border-color:transparent
+}
+
+.navbar-bottom-navlink{
+  font-size: .9em;
+}
+
+.navbar-bottom-logo{
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.navbar-bottom-navlink-btn-orange span{
+  background: #ff6700;
+  color: white;
+  padding: 6px 12px
+}
+
+
 /*Header Bottom*/
-.back-img{
+.header-bottom-container{
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat 10% center;
   min-height: 900px
 }
 
-.nav4-content{
+.header-bottom-content{
   text-align: center;
   margin: 190px auto 0;
   max-width: 410px;
 }
 
-.nav4-content h1{
+.header-bottom-content h1{
   font-size: 4.2em
 }
 
-.nav4-content h1 span,.nav4-price-content h1{
+.header-bottom-content h1 span,.header-bottom-price-content h1{
   text-align: left;
   color: #e53935
 }
 
-.nav4-content h3,.nav4-price-content h1{
+.header-bottom-content h3,.header-bottom-price-content h1{
   font-size: 3.1em
 }
 
-.nav4-content p{
+.header-bottom-content p{
   text-align: center;
   font-size: 1.1em;
   line-height: 1.87em
 }
 
-.nav4-price-content h1 i{
+.header-bottom-price-content h1 i{
   padding: 0 10px 0 0;
   font-size: .5em
 }
 
-.nav4-price-content p{
+.header-bottom-price-content p{
   text-align: justify;
   font-size: .9em
 }
@@ -245,71 +255,77 @@ p{
   min-height: 130px;
 }
 
-/*Section 1*/
-.sec1{
+/*Summary Section*/
+.section-summary-container{
+  position: relative;
   background: #fafafa
 }
 
-.sec1-content{
+.section-summary-content{
   padding: 0 10px;
   margin: 200px auto 0;
   max-width: 392px;
   min-height: 480px;
 }
 
-.bck-img1{
+.section-summary-features-batteryimg{
   display: block;
   width: 100px;
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat 0;
 }
 
-.bck-img2{
+.section-summary-features-dual_simimg{
   display: block;
   width: 100px;
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat -100px;
 }
 
-.bck-img3{
+.section-summary-features-snapdragonimg{
   display: block;
   width: 100px;
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat -200px;
 }
 
-.bck-img4{
+.section-summary-features-pdafimg{
   display: block;
   width: 100px;
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat -300px;
 }
 
-.bck-img5{
+.section-summary-features-displayimg{
   display: block;
   width: 100px;
   height: 100px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-icons.png?v=20170802) no-repeat -400px;
 }
-/*
-.sec1-content2{
-  display: flex;
-  flex-direction: row;
-}
 
-.sec1-content2 span{
-  margin: 0 50px
-}*/
-
-.sec1-content2 h4,.sec1-content2 p{
+.section-summary-features-content h4,.section-summary-features-content p{
   text-align: center;
 }
-.sec1-content2 p{
+.section-summary-features-content p{
   font-size: .9em
 }
 
-.sec1-content2 i{
+.section-summary-features-content i{
   margin: 0 auto 20px;
+}
+
+.section-summary-animation-stage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 1000px;
+}
+
+.section-summary-animation-stage ul{
+  margin: 0;
+  list-style-type: none;
 }
 
 /*Section 2*/
@@ -509,7 +525,7 @@ p{
 }
 
 /*Camera Section*/
-.section-camera-bgimg{
+.section-camera-container{
   min-height: 1055px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-blur-bg.jpg?v=20170802) no-repeat center;
   transition: all 1s;
@@ -529,12 +545,12 @@ p{
   text-align: center;
 }
 
-.section-camera-productimg{
+.section-camera-productimg,.section-camera-blur-productimg{
   opacity: 0;
   display: block;
   margin: 0 auto;
   height: 396px;
-  transform: translate3d(0,-50px,0)
+  transform: translate3d(0,-50px,0);
   transition: all 1s;
 }
 
@@ -561,50 +577,66 @@ p{
   border-color: rgba(0,0,0,0.3);
 }
 
-/*Section 8*/
-.sec8-bgimg{
+/*Screen Section*/
+.section-screen-container{
   color: white;
   min-height: 1100px;
-  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-screen-dark-bg.jpg?v=20170802) no-repeat center #1e1f40
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-screen-dark-bg.jpg?v=20170802) no-repeat center #1e1f40;
+  transition: all 1s;
 }
 
-.sec8-content{
+.section-screen-content{
   margin: 160px auto 0;
   padding: 0 10px;
   max-width: 744px;
   min-height: 165px;
+  transition: all 1s;
 }
 
-.sec8-content h3,.sec8-content p{
+.section-screen-content h3,.section-screen-content p{
   text-align: center;
 }
 
-.sec8-img{
-  margin: 158px auto 0;
+.section-screen-displayimg{
+  margin: 124px auto 0;
   max-width: 450px;
   min-height: 642px;
+  transition: all 0.9s;
 }
 
-/*Section 9*/
-.sec9-content{
+/*miui Section*/
+.section-miui-container{
+  position: relative;
+}
+
+.section-miui-content{
   padding: 0 10px;
   margin: 100px auto 50px;
   max-width: 764px;
   min-height: 195px;
+  transition: all 1s;
 }
 
-.sec9-content h3,.sec9-content p{
+.section-miui-content h3,.section-miui-content p{
   text-align: center;
 }
 
-/*.sec9-img-content{
-  display: flex;
-  flex-direction: row;
+.section-miui-animated-productimg{
+  position: absolute;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product.jpg?v=20170802) no-repeat;
+  width: 450px;
+  height: 900px;
+  z-index: -1;
+  top: -641px;
+  left: 50%;
+  margin: 0 0 0 -226px;
+  transition: all 1s;
 }
-*/
-.sec9-img{
+
+.section-miui-productimg{
   max-width: 362px;
   min-height: 692px;
+  transition: all 1s;
 }
 
 
@@ -846,11 +878,16 @@ footer h3{
 
 /*Media Queries*/
 @media screen and (max-width: 362px) {
+  .section-camera-content{
+    opacity: 1;
+  }
+
   .section-camera-productimg{
+    opacity: 1;
     height: 340px;
   }
 
-  .sec9-img{
+  .section-miui-productimg{
     max-width: 300px;
   }
 }
@@ -876,7 +913,7 @@ footer h3{
 }
 
 @media screen and (max-width: 462px) {
-  .sec8-img{
+  .section-screen-displayimg{
     max-width: 300px;
   }
 }
@@ -957,7 +994,7 @@ footer h3{
 }
 
 @media screen and (max-width: 991px){
-  .back-img{
+  .header-bottom-container{
     background-size: 50%;
     background-position: 5% bottom;
   }
@@ -977,11 +1014,11 @@ footer h3{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .nav2bar{
+  .navbar-middle-navcontent{
     margin: 12px 0;
   }
 
-  .nav2brand>li>a{
+  .navbar-middle-navcontent>li>a{
     font-size: .8em;
     padding: 20px 12px;
   }

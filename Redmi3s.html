@@ -12,26 +12,27 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Redmi3s.js"></script>
   </head>
-  <body onload="currentSlides(0);section_camera_animation();">
+  <body onload="currentSlides(0);section_camera_animation();section_screen_animation();section_miui_animation();">
 
 
     <header>
 
-      <section class="nav1">
+      <!--Navbar Top-->
+      <section class="navbar-top-container">
         <div class="container-fluid">
 
           <nav class="navbar-inverse">
-
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+
               <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
-                  <a class="nav1brand text-right" href="#">MI INDIA</a>
+                  <a class="navbar-top-navlink text-right" href="#">MI INDIA</a>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-                  <a class="nav1brand nav1brand-divider text-center" href="#">MIUI</a>
+                  <a class="navbar-top-navlink navbar-top-navlink-divider text-center" href="#">MIUI</a>
                 </div>
                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4">
-                  <a class="nav1brand text-left" href="#">DOWNLOAD MI STORE APP</a>
+                  <a class="navbar-top-navlink text-left" href="#">DOWNLOAD MI STORE APP</a>
                 </div>
               </div>
             </div>
@@ -39,80 +40,55 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-offset-2 col-lg-5">
               <div class="row">
                 <div class="col-xs-4 col-sm-offset-2 col-sm-3 col-md-offset-4 col-md-2 col-lg-offset-5 col-lg-2">
-                  <a class="text-right nav1brand" href="#">SIGN IN</a>
+                  <a class="text-right navbar-top-navlink" href="#">SIGN IN</a>
                 </div>
                 <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
-                  <a class="text-center nav1brand nav1brand-divider" href="#">SIGN UP</a>
+                  <a class="text-center navbar-top-navlink navbar-top-navlink-divider" href="#">SIGN UP</a>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
-                  <a class="text-left nav1brand dropdown cart-dropdown" href="#"><i class="fa fa-cart-plus"></i>CART(0)
-                    <div class="dropdown-menu dropdown-menu-right cart-dropdown-menu">
+                  <a class="text-left navbar-top-navlink dropdown navbar-top-cart-dropdown" href="#"><i class="fa fa-cart-plus"></i>CART(0)
+                    <div class="dropdown-menu dropdown-menu-right navbar-top-cart-dropdown-menu">
                       Your Cart is Empty
                     </div>
                   </a>
                 </div>
               </div>
-            </div>
 
+            </div>
           </nav>
 
-
-          <!--
-          <nav class="navbar navbar-default nav1bar">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand nav1brand" href="#">
-                  MI INDIA
-                </a>
-                <a class="navbar-brand nav1brand" href="#">
-                  <span>MIUI</span>
-                </a>
-                <a class="navbar-brand nav1brand" href="#">
-                  DOWNLOAD MI STORE APP
-                </a>
-                <div class="navbar-header nav1-right">
-                  <a class="navbar-brand nav1brand" href="#">
-                    SIGN IN
-                  </a>
-                  <a class="navbar-brand nav1brand" href="#">
-                    <span>SIGN UP</span>
-                  </a>
-                  <a class="navbar-brand nav1brand" href="#">
-                    <i class="fa fa-cart-plus"></i>
-                    CART(0)
-                  </a>
-                </div>
-
-    </div>
-  </div>
-</nav>
--->
         </div>
       </section>
 
-
-      <section class="nav2">
+      <!--Navbar Middle-->
+      <section>
         <div class="container-fluid">
 
-            <nav class="navbar navbar-default nav2bar">
+            <nav class="navbar navbar-default navbar-middle-container">
               <div class="container-fluid">
 
                 <div class="navbar-header">
-                  <i class="navbar-brand logo-slide"></i>
-                  <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav2-nav">
+                  <i class="navbar-brand navbar-middle-logo-slide"></i>
+                  <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#navbar-middle-navstage">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
                 </div>
 
-                <div id="nav2-nav" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav pull-right  nav2brand">
-                    <li><a class="navbar-brand " href="#">Mi Phones</a></li>
-                    <li><a class="navbar-brand" href="#">Redmi Phones</a></li>
-                    <li><a class="navbar-brand" href="#">Audio</a></li>
-                    <li><a class="navbar-brand" href="#">Smart Devices</a></li>
-                    <li><a class="navbar-brand" href="#">Mi Power Bank</a></li>
+                <div id="navbar-middle-navstage" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav pull-right  navbar-middle-navcontent">
+
+                    <li><a class="navbar-brand navbar-middle-navlink" href="#" onmouseover="navbar_middle_product_exhibit_show(0);" onmouseout="navbar_middle_product_exhibit_hide(0)">Mi Phones</a></li>
+
+                    <li><a class="navbar-brand navbar-middle-navlink" href="#" onmouseover="navbar_middle_product_exhibit_show(1);" onmouseout="navbar_middle_product_exhibit_hide(1)">Redmi Phones</a></li>
+
+                    <li><a class="navbar-brand navbar-middle-navlink" href="#" onmouseover="navbar_middle_product_exhibit_show(2);" onmouseout="navbar_middle_product_exhibit_hide(2)">Audio</a></li>
+
+                    <li><a class="navbar-brand navbar-middle-navlink" href="#" onmouseover="navbar_middle_product_exhibit_show(3);" onmouseout="navbar_middle_product_exhibit_hide(3)">Smart Devices</a></li>
+
+                    <li><a class="navbar-brand navbar-middle-navlink" href="#" onmouseover="navbar_middle_product_exhibit_show(4);" onmouseout="navbar_middle_product_exhibit_hide(4)">Mi Power Bank</a></li>
+
                     <li><a class="navbar-brand" href="#">Accessories</a></li>
                     <li><a class="navbar-brand" href="#">Mi Protect</a></li>
                     <li><a class="navbar-brand" href="#">Mi Community</a></li>
@@ -123,7 +99,8 @@
               </div>
             </nav>
 
-            <div class="product-exhibit">
+
+            <div class="navbar-middle-product-exhibit">
               <div class="row">
                 <div class="col-lg-2">
                   <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1467273554.27871565.jpg?width=140&height=140" alt="Mi Max"></a>
@@ -149,138 +126,173 @@
             </div>
 
 
+            <div class="navbar-middle-product-exhibit">
+              <div class="row">
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/redminote4/c68002.jpg?width=140&height=140" alt="Redmi Note 4"></a>
+                  <p><a href="#">Redmi Note 4</a></p>
+                  <p>From <i class="fa fa-rupee"></i> 9,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/T19bYgBXKv1RXrhCrK.jpg?width=140&height=140" alt="Redmi Note 3"></a>
+                  <p><a href="#">Redmi Note 3</a></p>
+                  <p>From <i class="fa fa-rupee"></i> 9,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/C3/Redmi4Agold800.jpg?width=140&height=140" alt="Redmi 4A"></a>
+                  <p><a href="#">Redmi 4A</a></p>
+                  <p><i class="fa fa-rupee"></i> 5,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/Goldnofinger.jpg?width=140&height=140" alt="Redmi 3S"></a>
+                  <p><a href="#">Redmi 3S</a></p>
+                  <p>From <i class="fa fa-rupee"></i> 11,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/Greyscreenfinger.jpg?width=140&height=140" alt="Redmi 3S+"></a>
+                  <p><a href="#">Redmi 3S+</a></p>
+                  <p>Offline exclusive</p>
+                </div>
+              </div>
+            </div>
 
 
-  <!--
-          <nav class="navbar navbar-default nav2bar">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                  <i class=" navbar-brand logo-slide"></i>
-      <a class="navbar-brand nav2brand" href="#">
-        Mi Phones
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Redmi Phones
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Audio
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Smart Devices
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Mi Power Bank
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Accessories
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Mi Protect
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Mi Community
-</a>
-<a class="navbar-brand nav2brand" href="#">
-  Support
-</a>
-    </div>
-  </div>
-</nav>
-
--->
-
-        </div>
-      </section>
+            <div class="navbar-middle-product-exhibit">
+              <div class="row">
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/headphones/pms_1482321205.78014235.jpg?width=140&height=140" alt="Mi In-Ear Headphones Basic Matte"></a>
+                  <p><a href="#">Mi In-Ear Headphones Basic Matte</a></p>
+                  <p><i class="fa fa-rupee"></i> 5,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/T1vPb_BQKv1RXrhCrK.jpg?width=140&height=140" alt="Mi Bluetooth Speaker"></a>
+                  <p><a href="#">Mi Bluetooth Speaker</a></p>
+                  <p><i class="fa fa-rupee"></i> 2,499</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1467970599.2134485.jpg?width=140&height=140" alt="Mi In-Ear Headphones Pro"></a>
+                  <p><a href="#">Mi In-Ear Headphones Pro</a></p>
+                  <p>From <i class="fa fa-rupee"></i> 1,399</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1468472632.45712863.jpg?width=140&height=140" alt="Mi Capsule Earphones"></a>
+                  <p><a href="#">Mi Capsule Earphones</a></p>
+                  <p><i class="fa fa-rupee"></i> 999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/headphones/prohd800.jpg?width=140&height=140" alt="Mi In-Ear Headphones Pro HD"></a>
+                  <p><a href="#">Mi In-Ear Headphones Pro HD</a></p>
+                  <p><i class="fa fa-rupee"></i> 1,999</p>
+                </div>
+              </div>
+            </div>
 
 
-<section class="nav3" data-spy="affix" data-offset-top="145">
+            <div class="navbar-middle-product-exhibit">
+              <div class="row">
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/ap08.jpg?width=140&height=140" alt="Mi Air Purifier 2"></a>
+                  <p><a href="#">Mi Air Purifier 2</a></p>
+                  <p><i class="fa fa-rupee"></i> 9,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1473679372.96718072.jpg?width=140&height=140" alt="Mi Air Purifier Filter"></a>
+                  <p><a href="#">Mi Air Purifier Filter</a></p>
+                  <p><i class="fa fa-rupee"></i> 2,499</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/vr800.jpg?width=140&height=140" alt="Mi VR Play"></a>
+                  <p><a href="#">Mi VR Play</a></p>
+                  <p><i class="fa fa-rupee"></i> 999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/miband2800.jpg?width=140&height=140" alt="Mi Band 2"></a>
+                  <p><a href="#">Mi Band 2</a></p>
+                  <p><i class="fa fa-rupee"></i> 1,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/T1_KC_B_LT1RXrhCrK.jpg?width=140&height=140" alt="Mi Band"></a>
+                  <p><a href="#">Mi Band</a></p>
+                  <p><i class="fa fa-rupee"></i> 999</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="navbar-middle-product-exhibit">
+              <div class="row">
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/pbpro.jpg?width=140&height=140" alt="10000mAh Mi Power Bank Pro"></a>
+                  <p><a href="#">10000mAh Mi Power Bank Pro</a></p>
+                  <p><i class="fa fa-rupee"></i> 1,999</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/powerbank/powerband8002.jpg?width=140&height=140" alt="10000mAh Mi Power Bank"></a>
+                  <p><a href="#">10000mAh Mi Power Bank</a></p>
+                  <p><i class="fa fa-rupee"></i> 1,299</p>
+                </div>
+                <div class="col-lg-2">
+                  <a href="#"><img src="http://i01.appmifile.com/webfile/globalimg/in/powerbank/powerband800.jpg?width=140&height=140" alt="20000mAh Mi Power Bank "></a>
+                  <p><a href="#">20000mAh Mi Power Bank </a></p>
+                  <p><i class="fa fa-rupee"></i> 2,199</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+<!--Navbar Bottom-->
+<section class="navbar-bottom-container" data-spy="affix" data-offset-top="145">
   <div class="container-fluid">
 
-    <nav class="navbar navbar-default nav3bar">
+    <nav class="navbar navbar-default navbar-bottom-nav-container">
       <div class="container-fluid">
 
         <div class="navbar-header">
-              <span class="navbar-brand">Redmi 3S</span>
-              <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav3-nav">
+              <span class="navbar-brand navbar-bottom-logo">Redmi 3S</span>
+              <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#navbar-bottom-nav-stage">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
         </div>
 
-        <div id="nav3-nav" class="collapse navbar-collapse">
+        <div id="navbar-bottom-nav-stage" class="collapse navbar-collapse">
           <ul class="nav navbar-nav pull-right">
-            <li><a class="active nav3brand" href="#">Overview</a></li>
-            <li><a class="nav3brand" href="#">Camera</a></li>
-            <li><a class="nav3brand" href="#">MIUI</a></li>
-            <li><a class="nav3brand" href="#">Specs</a></li>
-            <li><a class="nav3brand" href="#">Review</a></li>
-            <li><a class="nav3brand" href="#">Mi Protect</a></li>
-            <li><a class="nav3brand" href="#">F-code</a></li>
-            <li><a class="btn-orange" href="#"><span>Buy now</span></a></li>
+            <li><a class="active navbar-bottom-navlink" href="#">Overview</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">Camera</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">MIUI</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">Specs</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">Review</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">Mi Protect</a></li>
+            <li><a class="navbar-bottom-navlink" href="#">F-code</a></li>
+            <li><a class="navbar-bottom-navlink-btn-orange" href="#"><span>Buy now</span></a></li>
           </ul>
         </div>
 
       </div>
     </nav>
 
-
-
-    <!--
-    <nav class="navbar navbar-default nav3bar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <span class="navbar-brand nav3-logo" href="#">
-        <h3>Redmi 3S</h3>
-      </span>
-      <div class="navbar-header nav3-right">
-        <a class="navbar-brand nav3brand" href="#">
-          Overview
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          Camera
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          MIUI
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          Specs
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          Review
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          Mi Protect
-        </a>
-        <a class="navbar-brand nav3brand" href="#">
-          F-code
-        </a>
-        <a class="navbar-brand nav3brand btn-orange" href="#">
-          <span>Buy now</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
--->
   </div>
 </section>
 
-<!-- Nav4 section -->
-<section class="back-img img-responsive">
+<!-- Header Bottom -->
+<section class="header-bottom-container img-responsive">
 <div class="container">
 
   <div class="row">
     <div class="col-xs-12 col-sm-offset-5 col-sm-7 col-md-offset-6 col-md-6 col-lg-offset-7 col-lg-5">
 
-      <div class="nav4-content">
+      <div class="header-bottom-content">
         <h1>Redmi <span>3S</span>
         <h3>Power at last</h3>
         <p>4100mAh two-day battery / Metal body<br>
           Snapdragon 430 / 13MP PDAF camera
         </p>
 
-        <div class="nav4-price-content">
+        <div class="header-bottom-price-content">
           <div class="row">
 
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
@@ -336,14 +348,23 @@
 
     </header>
 
-    <!-- Section1-->
-    <section class="sec1">
+    <!--Summary Section-->
+    <section class="section-summary-container">
       <div class="container">
+
+        <div class="section-summary-animation-stage">
+          <ul>
+            <li class="section-summary-mi5-white"></li>
+            <li class="section-summary-mi5-black"></li>
+            <li class="section-summary-mi5-brown"></li>
+            <li class="section-summary-mi5-grey"></li>
+          </ul>
+        </div>
 
         <div class="row">
           <div class="col-xs-12 col-sm-offset-2 col-sm-7 col-md-offset-2 col-md-6 col-lg-offset-2 col-lg-5">
 
-            <div class="sec1-content">
+            <div class="section-summary-content">
               <h2>Always evolving</h2>
               <p>The next step in the Redmi evolution, Redmi 3S is
                  dressed in a premium metal body. That's not all, it
@@ -362,35 +383,35 @@
           </div>
         </div>
 
-        <div class="sec1-content2">
+        <div class="section-summary-features-content">
           <div class="row">
 
             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-offset-0 col-lg-2">
-              <i class="bck-img1"></i>
+              <i class="section-summary-features-batteryimg"></i>
               <h4>4100mAh</h4>
               <p>High-capacity battery</p>
             </div>
 
             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-              <i class="bck-img2"></i>
+              <i class="section-summary-features-dual_simimg"></i>
               <h4>4G Dual SIM</h4>
               <p>VoLTE support</p>
             </div>
 
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-              <i class="bck-img3"></i>
+              <i class="section-summary-features-snapdragonimg"></i>
               <h4>Snapdragon 430</h4>
               <p>Octa-core processor</p>
             </div>
 
             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-              <i class="bck-img4"></i>
+              <i class="section-summary-features-pdafimg"></i>
               <h4>PDAF</h4>
               <p>13MP rear camera</p>
             </div>
 
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-              <i class="bck-img5"></i>
+              <i class="section-summary-features-displayimg"></i>
               <h4>12.6cm (5) HD display</h4>
               <p>Lightweight 144g</p>
             </div>
@@ -702,7 +723,7 @@
 
 
     <!--Camera Section-->
-    <section class="section-camera-bgimg img-responsive">
+    <section class="section-camera-container img-responsive">
       <div class="container-fluid">
 
         <div class="row">
@@ -717,7 +738,7 @@
 
         <div class="row">
           <div class="hidden-xs col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802" alt="PDAF-image" class="section-camera-productimg">
+            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802" alt="PDAF-image" class="section-camera-blur-productimg">
           </div>
           <div class="visible-xs col-xs-offset-1 col-xs-10">
             <img src="C:\Users\user\Desktop\Training\images\pdaf_img.png" alt="PDAF-image" class="section-camera-productimg">
@@ -777,13 +798,13 @@
     </section>
 
 
-    <!--Section8-->
-    <section class="sec8-bgimg img-responsive">
+    <!--Screen Section-->
+    <section class="section-screen-container img-responsive">
       <div class="container-fluid">
 
 
             <div class="row">
-              <div class="sec8-content">
+              <div class="section-screen-content">
                 <h3>12.6cm (5) HD display</h3>
                 <p>Redmi 3S has a 12.6cm (5) fully laminated display packed with pixels for HD resolution. It also has Reading mode, which prevents eye fatigue by reducing blue light rays from the screen. Color temperature can also be adjusted based on your preference - warm, standard, or cool.
                 </p>
@@ -792,7 +813,7 @@
 
             <div class="row">
               <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
-                <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-screen-product.png?v=20170802" alt="display-image" class="sec8-img img-responsive"/>
+                <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-screen-product.png?v=20170802" alt="display image" class="section-screen-displayimg img-responsive"/>
               </div>
             </div>
 
@@ -812,27 +833,30 @@
       </div>
     </section>
 
-    <!--Section9-->
-    <section>
+    <!--miui Section-->
+    <section class="section-miui-container">
       <div class="container-fluid">
 
         <div class="row">
-          <div class="sec9-content">
+          <div class="section-miui-content">
             <h3>MIUI 8, coming soon to Redmi 3S</h3>
             <p>Inspired by the swirling colors of the kaleidoscope, MIUI is beautiful, user-friendly and more efficient than ever. Take scrolling screenshots, calculate currency conversions, create dual app log-ins, or access split phone profiles. There are so many exciting new features in MIUI 8, coming soon to over 200 million active users worldwide.
             </p>
           </div>
         </div>
 
+        <div class="hidden-xs section-miui-animated-productimg"></div>
+
+
         <div class="row">
           <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
-            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-l.jpg?v=20170802" class="sec9-img">
+            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-l.jpg?v=20170802" class="section-miui-productimg">
           </div>
           <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
-            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-c.jpg?v=20170802" class="sec9-img">
+            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-c.jpg?v=20170802" class="section-miui-productimg">
           </div>
           <div class="col-xs-12 col-sm-offset-4 col-sm-5 col-md-offset-4 col-md-5 col-lg-offset-0 col-lg-4">
-            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-r.jpg?v=20170802" class="sec9-img">
+            <img src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-miui-product-r.jpg?v=20170802" class="section-miui-productimg">
           </div>
         </div>
 
