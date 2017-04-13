@@ -1,12 +1,27 @@
 $(document).ready(function () {
   $(window).scroll(function() {
+
+    if ($(window).scrollTop()>=$(".section-summary-container").offset().top && $(window).scrollTop()<=$(".section-summary-container").offset().top+1526) {
+      $(".section-summary-animation-stage").css("position","fixed");
+
+      var mi5_slide=$(window).scrollTop()-$(".section-summary-container").offset().top;
+      $(".section-summary-mi5-white").css("transform","translate3d(-"+mi5_slide+"px,"+mi5_slide+"px,0)");
+      $(".section-summary-mi5-black").css("transform","translate3d(-"+mi5_slide+"px,"+mi5_slide+"px,0)");
+      $(".section-summary-mi5-brown").css("transform","translate3d("+mi5_slide+"px,-"+mi5_slide+"px,0)");
+      $(".section-summary-mi5-grey").css("transform","translate3d("+mi5_slide+"px,-"+mi5_slide+"px,0)");
+    }
+    else {
+      $(".section-summary-animation-stage").css("position","absolute");
+    }
+
+
     if($(window).scrollTop()>=$(".section-camera-container").offset().top+100)
     {
       $(".section-camera-container").css("background","url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-blur-bg.jpg?v=20170802) no-repeat center");
-      $(".section-camera-blur-productimg").css("opacity","1");
-      $(".section-camera-blur-productimg").attr('src','http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-border.png?v=20170802');
+      $(".section-camera-productimg").css("opacity","1");
+
       setTimeout(function() {
-      $(".section-camera-blur-productimg").css("transform","translate3d(0,0,0)").attr('src','http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802');
+      $(".section-camera-productimg").css("transform","translate3d(0,30px,0)").attr('src','http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-product.png?v=20170802');
       $(".section-camera-content").css("opacity","1");
     },1000);
     }
@@ -22,10 +37,13 @@ $(document).ready(function () {
     if($(window).scrollTop()>=$(".section-screen-container").offset().top+900) {
 
       $(".section-screen-container").css("overflow","hidden");
-      setTimeout(function () {
-        $(".section-screen-displayimg").css({"transform":"translate3d(0,564px,0) scale(0.75)"});
-        $(".section-miui-animated-productimg").css({"transform":"scale(0.75)","top":"240px"});
-      },500);
+
+      if ($(".section-miui-animated-productimg").css("display")=="block") {
+        setTimeout(function () {
+          $(".section-screen-displayimg").css({"transform":"translate3d(0,564px,0) scale(0.75)"});
+          $(".section-miui-animated-productimg").css({"transform":"scale(0.75)","top":"240px"});
+        },500);
+      }
 
       setTimeout(function () {
         $(".section-miui-content").css("opacity","1");
@@ -35,7 +53,7 @@ $(document).ready(function () {
 
     }
 
-    else if ($(window).scrollTop()>=$(".section-screen-container").offset().top && $(window).scrollTop()<=$(".section-screen-container").offset().top+$(".section-screen-container").outerHeight()) {
+    if ($(window).scrollTop()<=$(".section-screen-container").offset().top+900) {
       $(".section-screen-displayimg").css({"transform":"translate3d(0,0,0)"});
     }
 
@@ -94,8 +112,14 @@ function navbar_middle_product_exhibit_hide(n) {
 }
 
 function section_camera_animation() {
-  var section_camera_bgimg=document.getElementsByClassName('section-camera-container');
+  var section_camera_bgimg=document.getElementsByClassName('section-camera-container'),
+  section_camera_content=document.getElementsByClassName('section-camera-content'),
+  section_camera_productimg=document.getElementsByClassName('section-camera-productimg');
   section_camera_bgimg[0].style.background="url('http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-bg.jpg?v=20170802') no-repeat center 0";
+  section_camera_content[0].style.opacity="0";
+  section_camera_productimg[0].style.opacity="0";
+  section_camera_productimg[0].style.transform="translate3d(0,-100px,0)";
+  section_camera_productimg[0].src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-border.png?v=20170802";
 }
 
 function section_screen_animation() {
