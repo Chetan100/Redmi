@@ -203,7 +203,7 @@ p{
 
 /*Header Bottom*/
 .header-bottom-container{
-  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat 10% center;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-intro-bg-3s.jpg?v=20170802) no-repeat 10% bottom;
   min-height: 900px
 }
 
@@ -241,11 +241,6 @@ p{
   text-align: justify;
   font-size: .9em
 }
-
-/*.nav4-price-content{
-  display: flex;
-  flex-direction: row;
-}*/
 
 .divider{
   width: 1%;
@@ -315,6 +310,7 @@ p{
 }
 
 .section-summary-animation-stage{
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -325,7 +321,42 @@ p{
 
 .section-summary-animation-stage ul{
   margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+
+.section-summary-animation-stage ul li{
+  position: absolute;
+  width: 66.35%;
+  height: 92.40%;
+  transition: all .3s;
+}
+.section-summary-mi5-white{
+  top: -43%;
+  left: 50%;
+  margin: 0 0 0 -7%;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-summary-01.png?v=20170802) no-repeat center;
+}
+
+.section-summary-mi5-black{
+  top: 60%;
+  left: 50%;
+  margin: 0 0 0 -96.5%;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-summary-02.png?v=20170802) no-repeat center;
+}
+
+.section-summary-mi5-brown{
+  top: -30%;
+  left: 50%;
+  margin: 0 0 0 41.50%;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-summary-03.png?v=20170802) no-repeat center;
+}
+
+.section-summary-mi5-grey{
+  top: 48%;
+  left: 50%;
+  margin: 0 0 0 -17%;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-summary-04-3s.png?v=20170802) no-repeat center;
 }
 
 /*Section 2*/
@@ -360,18 +391,6 @@ p{
   text-align: center;
   color: white
 }
-
-/*.sec3-content ul{
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  padding: 0 0 0 460px;
-  margin: 0;
-}
-
-.sec3-content ul li{
-  padding: 0 20px
-}*/
 
 .sec3-content a{
   display: block;
@@ -480,20 +499,6 @@ p{
   min-height: 335px;
 }
 
-/*.sec4-content-bgimg ul{
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  padding: 0 0 0 130px;
-  margin: 20px 0 0;
-}
-
-.sec4-content-bgimg ul li{
-  margin: 0 50px 0 0;
-
-}
-*/
-
 .data1::before{
   content: "";
   margin: 0 10px 0 0;
@@ -532,7 +537,6 @@ p{
 }
 
 .section-camera-content{
-  opacity: 0;
   padding: 0 10px;
   margin: 180px auto 0;
   color: white;
@@ -546,11 +550,9 @@ p{
 }
 
 .section-camera-productimg,.section-camera-blur-productimg{
-  opacity: 0;
   display: block;
   margin: 0 auto;
   height: 396px;
-  transform: translate3d(0,-50px,0);
   transition: all 1s;
 }
 
