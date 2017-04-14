@@ -79,7 +79,7 @@ p{
 
 .navbar-top-cart-dropdown:hover .navbar-top-cart-dropdown-menu{
   display: block;
-  animation: cart-dropdown-menu-auto-height 1s ease
+  animation: cart-dropdown-menu-auto-height 1.5s ease;
 }
 
 .navbar-top-cart-dropdown-menu{
@@ -91,12 +91,16 @@ p{
   min-width: 300px;
   text-align: center;
   border-radius: 0;
-  transition: display 1s ease;
+  transition: all 1s ease;
 }
 
 @keyframes cart-dropdown-menu-auto-height {
-  from{height: 0;padding: 0}
-  to{height: 94px;}
+  from{
+    height: 0;
+  }
+  to{
+    height: 94px;
+  }
 }
 
 /*Navbar Middle*/
@@ -118,6 +122,7 @@ p{
   background: transparent;
   border-color: transparent;
   margin: 12px 35px;
+  z-index: 10;
 }
 
 .navbar-middle-navcontent>li>a{
@@ -127,12 +132,14 @@ p{
   padding: 20px 0 20px 60px;
 }
 
-.navbar-middle-navcontent>li>a:hover{
+.navbar-middle-navcontent .navbar-middle-navlink:hover{
   cursor: default;
   color: orange;
 }
 
 .navbar-middle-product-exhibit{
+  box-shadow: 0 2px 2px rgba(0,0,0,.3);
+  border-top: 1px solid #dfdfdf;
   display: none;
   background: white;
   z-index: 10;
@@ -143,14 +150,18 @@ p{
   height: 242px;
 }
 
-/*.navbar-middle-navlink:hover{
+/*.navbar-middle-navlink:hover,.navbar-middle-product-exhibit{
   animation: navbar-middle-product-exhibit-auto-height 1s ease;
-}*/
+}
 
 @keyframes navbar-middle-product-exhibit-auto-height {
-  from{height: 0;}
-  to{height: 242px;}
-}
+  from{
+    height: 0;
+  }
+  to{
+    height: 242px;
+  }
+}*/
 
 .navbar-middle-product-exhibit a:hover,.navbar-middle-product-exhibit a{
   font-size: 1.3em;
@@ -173,8 +184,6 @@ p{
 
 /*Navbar Bottom*/
 .navbar-bottom-container{
-  top: 0;
-  width: 100%;
   background: #f5f5f5;
 }
 
@@ -261,6 +270,10 @@ p{
   margin: 200px auto 0;
   max-width: 392px;
   min-height: 480px;
+}
+
+.section-summary-features-animation{
+  transition: all 1.5s;
 }
 
 .section-summary-features-batteryimg{
@@ -472,46 +485,53 @@ p{
   background: #666;
 }
 
-/*Section 4*/
-.sec4-bgimg{
+/*Battery Section*/
+.section-battery-container{
   color: white;
   min-height: 1035px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-battery-3s.jpg?v=20170728) no-repeat black 8% bottom;
+  transition: all 1.5s;
 }
 
-.sec4-content-bgimg{
+.section-battery-graph{
   margin: 70px 0 0;
   max-width: 470px;
   height: 246px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-battery-chart.png?v=20170802) no-repeat;
+  transition: all 1.5s;
 }
 
-.sec4-content-chart{
+.section-battery-chart{
   max-width: 527px;
   height: 246px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-battery-text-3s.png?v=20170802) no-repeat;
+  transition: all 1.5s;
 }
 
-.sec4-content{
+.section-battery-content{
   padding: 0 10px;
   margin: 220px auto 0;
   max-width: 496px;
   min-height: 335px;
 }
 
-.data1::before{
+.section-battery-graph-redmi2-data::before{
   content: "";
-  margin: 0 10px 0 0;
-  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: -5%;
+  display: block;
   width: 10px;
   height: 10px;
   background: #9b6133;
 }
 
-.sec4-content-bgimg p:nth-of-type(2)::before{
+.section-battery-graph-redmi3s-data::before{
+  position: absolute;
   content: "";
-  margin: 0 10px 0 0;
-  display: inline-block;
+  top: 25%;
+  left: -5%;
+  display: block;
   width: 10px;
   height: 10px;
   background: #403f85;
@@ -531,9 +551,20 @@ p{
 
 /*Camera Section*/
 .section-camera-container{
+  position: relative;
   min-height: 1055px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-blur-bg.jpg?v=20170802) no-repeat center;
   transition: all 1s;
+}
+
+.section-camera-is-flash{
+  position: absolute;
+  top: 33.6%;
+  left: 25.9%;
+  z-index: 5;
+  width: 47.5%;
+  height: 34%;
+  background: rgba(255,255,255,.8);
 }
 
 .section-camera-content{
