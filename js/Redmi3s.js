@@ -1,6 +1,14 @@
 $(document).ready(function () {
   $(window).scroll(function() {
 
+    if($(window).scrollTop()>=$(".navbar-bottom-container").offset().top) {
+
+      $(".navbar-bottom-container").css({"top":"0","width":"100%","background":"rgba(255,255,255,.9)","z-index":"30","border-bottom":"1px solid #dfdfdf","box-shadow":"0 0 3px #c3c3c3"});
+    }
+    else{
+      $(".navbar-bottom-container").css({"background":"#f5f5f5","border":"none","box-shadow":"none"});
+    }
+
     if ($(window).scrollTop()>=$(".section-summary-container").offset().top && $(window).scrollTop()<=$(".section-summary-container").offset().top+1526) {
       $(".section-summary-animation-stage").css("position","fixed");
 
@@ -12,6 +20,24 @@ $(document).ready(function () {
     }
     else {
       $(".section-summary-animation-stage").css("position","absolute");
+    }
+
+    if ($(window).scrollTop()>=$(".section-summary-container").offset().top+350) {
+      var section_summary_features_animation=$(".section-summary-features-animation");
+      $(section_summary_features_animation[2]).css("opacity","1");
+      $(section_summary_features_animation[0]).css({"opacity":"1","transform":"translate3d(0,0,0)"});
+      $(section_summary_features_animation[1]).css({"opacity":"1","transform":"translate3d(0,0,0)"});
+      $(section_summary_features_animation[3]).css({"opacity":"1","transform":"translate3d(0,0,0)"});
+      $(section_summary_features_animation[4]).css({"opacity":"1","transform":"translate3d(0,0,0)"});
+    }
+
+    if ($(window).scrollTop()>=$(".section-battery-container").offset().top+350) {
+
+      $(".section-battery-graph").css({"transform":"scale(1,1)","transform-origin":"50% 100%"});
+      setTimeout(function functionName() {
+        $(".section-battery-chart").css("opacity","1");
+      },2000);
+
     }
 
 
@@ -114,7 +140,8 @@ function navbar_middle_product_exhibit_hide(n) {
 function section_camera_animation() {
   var section_camera_bgimg=document.getElementsByClassName('section-camera-container'),
   section_camera_content=document.getElementsByClassName('section-camera-content'),
-  section_camera_productimg=document.getElementsByClassName('section-camera-productimg');
+  section_camera_productimg=document.getElementsByClassName('section-camera-productimg'),
+  section_camera_is_flash=document.getElementsByClassName('section-camera-is-flash');
   section_camera_bgimg[0].style.background="url('http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-bg.jpg?v=20170802') no-repeat center 0";
   section_camera_content[0].style.opacity="0";
   section_camera_productimg[0].style.opacity="0";
@@ -139,4 +166,25 @@ function section_miui_animation() {
   section_miui_productimg[1].style.opacity="0";
   section_miui_productimg[2].style.opacity="0";
   section_miui_productimg[2].style.transform="translate3d(-250px,0,0)"
+}
+
+function section_summary_features_animation() {
+  var section_summary_features_content=document.getElementsByClassName('section-summary-features-animation');
+  section_summary_features_content[0].style.opacity="0";
+  section_summary_features_content[0].style.transform="translate3d(-50px,0,0)";
+  section_summary_features_content[1].style.opacity="0";
+  section_summary_features_content[1].style.transform="translate3d(-50px,0,0)";
+  section_summary_features_content[2].style.opacity="0";
+  section_summary_features_content[3].style.opacity="0";
+  section_summary_features_content[3].style.transform="translate3d(50px,0,0)";
+  section_summary_features_content[4].style.opacity="0";
+  section_summary_features_content[4].style.transform="translate3d(50px,0,0)";
+}
+
+function section_battery_graph_animation() {
+  var section_battery_graph_bgimg=document.getElementsByClassName('section-battery-graph'),
+  section_battery_chart_img=document.getElementsByClassName('section-battery-chart');
+  section_battery_graph_bgimg[0].style.transform="scale(1,0)";
+  section_battery_chart_img[0].style.opacity="0";
+
 }
