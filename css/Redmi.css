@@ -189,7 +189,7 @@ p{
 
 .navbar-bottom-nav-container{
   color: #333;
-  margin: 5px 0;
+  margin: 5px 20px;
   background: transparent;
   border-color:transparent
 }
@@ -389,23 +389,24 @@ p{
   text-align: center;
 }
 
-/*Section 3*/
-.sec3-content{
+/*Demo Section*/
+.section-demo-content{
   padding: 170px 0 80px 0;
   background: black
 }
 
-.sec3-content hr{
+.section-demo-content hr{
   margin: 40px auto 30px;
   width: 100px;
   border-color: rgba(255,255,255,0.3);
 }
-.sec3-content h3{
+
+.section-demo-content h3{
   text-align: center;
   color: white
 }
 
-.sec3-content a{
+.section-demo-content a{
   display: block;
   text-align: center;
   font-size: 1.3em;
@@ -413,7 +414,7 @@ p{
   color: #666
 }
 
-.slider{
+.section-demo-slider{
   padding: 0;
   position: relative;
   min-height: 180px;
@@ -421,30 +422,30 @@ p{
   color: white
 }
 
-.slides{
+.section-demo-slides{
   display: none;
 }
 
-.slides-content{
+.section-demo-slides-content{
   padding: 0 10px;
   text-align: justify;
   max-width: 360px;
   margin: 170px auto 0;
 }
 
-.slides-video{
+.section-demo-slides-video{
   padding: 0;
   min-height: 180px;
   overflow: hidden;
 }
 
-.slides-video video{
+.section-demo-slides-video video{
   margin: 0 0 0 -100px;
   width: 960px;
   height: auto;
 }
 
-.prev,.next{
+.section-demo-slider-nav-prev,.section-demo-slider-nav-next{
   display: block;
   position: absolute;
   left: 0;
@@ -456,34 +457,41 @@ p{
   background: #202020;
 }
 
-.prev:hover,.next:hover{
+.section-demo-slider-nav-prev:hover,.section-demo-slider-nav-next:hover{
   background: #333;
   color: white;
   text-decoration: none;
 }
 
-.prev:focus,.next:focus{
+.section-demo-slider-nav-prev:focus,.section-demo-slider-nav-next:focus{
   color: white;
   text-decoration: none;
   background: #202020;
 }
 
-.next{
+.section-demo-slider-nav-next{
   left: 95%;
 }
 
-.links:focus{
+.section-demo-navlink:focus{
   color: white;
 }
 
-.links:nth-of-type(2)::before,.links:nth-of-type(2)::after{
-  content: "";
+.section-demo-navlink:nth-of-type(2)::before,.section-demo-navlink:nth-of-type(2)::after{
+  content: '';
+  position: absolute;
   cursor: pointer;
   display: block;
-  width: 1px;
-  height: 1px;
-  background: #666;
+  width: 5px;
+  height: 5px;
+  background: white;
 }
+
+.section-demo-slides-animation{
+  transform-origin: 0 0;
+  transition: all 1.5s ease;
+}
+
 
 /*Battery Section*/
 .section-battery-container{
@@ -554,7 +562,7 @@ p{
   position: relative;
   min-height: 1055px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-camera-blur-bg.jpg?v=20170802) no-repeat center;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 
 .section-camera-is-flash{
@@ -565,6 +573,7 @@ p{
   width: 47.5%;
   height: 34%;
   background: rgba(255,255,255,.8);
+  transition: all 1.5s;
 }
 
 .section-camera-content{
@@ -580,11 +589,11 @@ p{
   text-align: center;
 }
 
-.section-camera-productimg,.section-camera-blur-productimg{
+.section-camera-productimg{
   display: block;
   margin: 0 auto;
   height: 396px;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 
 /*Section 7*/
@@ -960,23 +969,23 @@ footer h3{
     text-align: justify;
   }
 
-  .sec4-content{
+  .section-battery-content{
     margin: 0;
   }
 
-  .sec4-bgimg{
+  .section-battery-container{
     background-size: 20%;
     background-position: center bottom;
   }
 
-  .sec4-content-bgimg{
+  .section-battery-graph{
     min-height: 150px;
     margin: 0;
     background-size: 105%;
     background-position: 0 80%;
   }
 
-  .sec4-content-chart{
+  .section-battery-chart{
     min-height: 150px;
     background-size: 105%;
     background-position: 0 80%;
@@ -1021,46 +1030,55 @@ footer h3{
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .sec4-bgimg{
+  .section-battery-container{
     background-position: 0 bottom;
   }
 }
 
 @media screen and (max-width: 991px){
+  #navbar-bottom-nav-stage>ul>li>a{
+    padding: 10px 10px;
+  }
+
   .header-bottom-container{
     background-size: 50%;
     background-position: 5% bottom;
   }
 
-  .sec3-content{
+  .section-demo-content{
     padding: 60px 0 ;
   }
 
-  .slides-content{
+  .section-demo-slides-content{
     margin: 80px auto;
   }
 
-  .slides-video video{
+  .section-demo-slides-video video{
     max-width: 100%;
     margin: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .navbar-middle-navcontent{
-    margin: 12px 0;
-  }
-
-  .navbar-middle-navcontent>li>a{
-    font-size: .8em;
-    padding: 20px 12px;
-  }
-}
-
   .sec7-bgimg{
     background-position: 58% bottom;
   }
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1265px) {
+  .navbar-middle-navcontent{
+    margin: 12px 0;
+  }
+
+  .navbar-middle-container{
+    /*margin: 0;*/
+  }
+
+  .navbar-middle-navcontent>li>a{
+    font-size: .7em;
+    padding: 10px 12px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1075,19 +1093,5 @@ footer h3{
 
   .sec11-content,.sec11-content p{
     color: #e53935;
-  }
-}
-
-
-
-
-@media screen and (min-width: 1290px) {
-  .slides-video video{
-    float: right;
-  }
-
-  .slides-float video{
-    margin: 0;
-    float: left;
   }
 }

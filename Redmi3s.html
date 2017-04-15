@@ -12,7 +12,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Redmi3s.js"></script>
   </head>
-  <body onload="currentSlides(0);section_camera_animation();section_screen_animation();section_miui_animation();section_summary_features_animation();section_battery_graph_animation();">
+  <body onload="start();">
 
 
     <header>
@@ -325,10 +325,10 @@
 
         <div class="section-summary-animation-stage">
           <ul>
-            <li data-scroll-animation="{'x':'-2160','y':'2160'}" class="section-summary-mi5-white"></li>
-            <li class="section-summary-mi5-black"></li>
-            <li class="section-summary-mi5-brown"></li>
-            <li class="section-summary-mi5-grey"></li>
+            <li class="section-summary-mi5-white img-responsive"></li>
+            <li class="section-summary-mi5-black img-responsive"></li>
+            <li class="section-summary-mi5-brown img-responsive"></li>
+            <li class="section-summary-mi5-grey img-responsive"></li>
           </ul>
         </div>
 
@@ -437,20 +437,20 @@
       <div class="container-fluid">
 
         <div class="row">
-            <div class="sec3-content">
+            <div class="section-demo-content">
 
               <h3>Test drive a game</h3>
               <hr>
 
               <div class="row">
                 <div class="col-xs-offset-4 col-xs-4 col-sm-offset-3 col-sm-2 col-md-offset-3 col-md-2 col-lg-offset-3 col-lg-2">
-                  <a href="javascript:void(0);" class="links" onclick="currentSlides(0);">Asphalt 8</a>
+                  <a href="javascript:void(0);" class="section-demo-navlink" onclick="currentSlides(0);">Asphalt 8</a>
                 </div>
                 <div class="col-xs-offset-3 col-xs-6 col-sm-offset-0 col-sm-3 col-md-offset-0 col-md-2 col-lg-offset-0 col-lg-2">
-                  <a href="javascript:void(0);" class="links" onclick="currentSlides(1);">Modern Combat</a>
+                  <a href="javascript:void(0);" class="section-demo-navlink" onclick="currentSlides(1);">Modern Combat</a>
                 </div>
                 <div class="col-xs-offset-3 col-xs-7 col-sm-offset-0 col-sm-3 col-md-offset-0 col-md-3 col-lg-offset-0 col-lg-2">
-                  <a href="javascript:void(0);" class="links" onclick="currentSlides(2);">Plants vs Zombies</a>
+                  <a href="javascript:void(0);" class="section-demo-navlink" onclick="currentSlides(2);">Plants vs Zombies</a>
                 </div>
               </div>
 
@@ -459,11 +459,11 @@
 
 
         <div class="row">
-          <div class="slider col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="section-demo-slider col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-              <div class="slides">
-                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-3 content-fwd1">
-                  <div class="slides-content">
+              <div class="section-demo-slides">
+                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-3 section-demo-slides-animation">
+                  <div class="section-demo-slides-content">
                     <h2>Asphalt 8</h2>
                     <p>Race to the finish line on Redmi 3S. Its high
                        sensitivity and graphics rendering delivers an
@@ -471,19 +471,19 @@
                      </p>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slides-video content-fwd1">
-                  <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.mp4?v20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.jpg?v=20170728" loop>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 section-demo-slides-video section-demo-slides-animation">
+                  <video class="pull-right" src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.mp4?v20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.jpg?v=20170728" loop>
                   </video>
                 </div>
               </div>
 
-              <div class="slides">
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slides-video slides-float content-fwd2">
-                  <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.jpg?v=20170728" loop>
+              <div class="section-demo-slides">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 section-demo-slides-video section-demo-slides-animation">
+                  <video class="pull-left" src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.jpg?v=20170728" loop>
                   </video>
                 </div>
-                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 col-lg-4 content-fwd2">
-                  <div class="slides-content">
+                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 col-lg-4 section-demo-slides-animation">
+                  <div class="section-demo-slides-content">
                     <h2>Modern Combat</h2>
                     <p>Shoot to your heart's content. First person shooting
                        games require accuracy and precision. Respond
@@ -493,9 +493,9 @@
                   </div>
                 </div>
               </div>
-              <div class="slides">
-                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 col-lg-4 content-fwd2">
-                  <div class="slides-content">
+              <div class="section-demo-slides">
+                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 col-lg-4 section-demo-slides-animation">
+                  <div class="section-demo-slides-content">
                     <h2>Plants vs Zombies</h2>
                     <p>When you need to plant in a frenzy, Redmi 3S
                        keeps up with you. Tap and defend your turf as
@@ -504,87 +504,21 @@
                      </p>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slides-video content-fwd2">
-                  <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.jpg?v=20170728" loop>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 section-demo-slides-video section-demo-slides-animation">
+                  <video class="pull-right" src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.jpg?v=20170728" loop>
                   </video>
                 </div>
               </div>
-              <a href="javascript:void(0);" class="hidden-xs hidden-sm prev" onclick="plusSlides(-1);">&#10094;</a>
-              <a href="javascript:void(0);" class="hidden-xs hidden-sm next" onclick="plusSlides(+1);">&#10095;</a>
+              <a href="javascript:void(0);" class="hidden-xs hidden-sm section-demo-slider-nav-prev" onclick="plusSlides(-1);">&#10094;</a>
+              <a href="javascript:void(0);" class="hidden-xs hidden-sm section-demo-slider-nav-next" onclick="plusSlides(+1);">&#10095;</a>
 
           </div>
         </div>
 
-
-<!--
-        <div class="row">
-          <div class="sec3-content">
-            <h3>Test drive a game</h3>
-            <hr>
-            <ul>
-              <li><a href="javascript:void(0);" class="links" onclick="currentSlides(0);">Asphalt 8</a></li>
-              <li><a href="javascript:void(0);" class="links" onclick="currentSlides(1);">Modern Combat</a></li>
-              <li><a href="javascript:void(0);" class="links" onclick="currentSlides(2);">Plants vs Zombies</a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-12 col-lg-12 slider">
-            <div class="row slides">
-              <div class="col-md-6 col-lg-6 content-fwd1">
-                <div class="slides-content">
-                  <h2>Asphalt 8</h2>
-                  <p>Race to the finish line on Redmi 3S. Its high
-                     sensitivity and graphics rendering delivers an
-                     experience that comes to life.
-                   </p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-6 slides-video content-fwd1">
-                <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.mp4?v20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.jpg?v=20170728" loop>
-                </video>
-              </div>
-            </div>
-            <div class="slides">
-              <div class="col-md-6 col-lg-6 slides-video content-fwd2">
-                <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-01.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-02.jpg?v=20170728" loop>
-                </video>
-              </div>
-              <div class="col-md-6 col-lg-6 content-fwd2">
-                <div class="slides-content">
-                  <h2>Modern Combat</h2>
-                  <p>Shoot to your heart's content. First person shooting <br>
-                     games require accuracy and precision. Respond <br>
-                     quickly and instinctively without any lags on Redmi <br>
-                     3S.
-                   </p>
-                </div>
-              </div>
-            </div>
-            <div class="slides">
-              <div class="col-md-6 col-lg-6 content-fwd2">
-                <div class="slides-content">
-                  <h2>Plants vs Zombies</h2>
-                  <p>When you need to plant in a frenzy, Redmi 3S <br>
-                     keeps up with you. Tap and defend your turf as <br>
-                     zombies inch closer. Playing on Redmi 3S is an <br>
-                     exhilarating, immersive experience.
-                   </p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-6 slides-video content-fwd2">
-                <video src="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.mp4?v=20170728" autoplay poster="http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/intro-demo-video-03.jpg?v=20170728" loop>
-                </video>
-              </div>
-            </div>
-            <a href="javascript:void(0);" class="prev" onclick="plusSlides(-1);">&#10094;</a>
-            <a href="javascript:void(0);" class="next" onclick="plusSlides(+1);">&#10095;</a>
-          </div>
-        </div>
-      -->
       </div>
     </section>
 
-    <!--section4-->
+    <!--Battery Section-->
     <section class="section-battery-container img-responsive">
       <div class="container-fluid">
 
@@ -764,7 +698,7 @@
           </div>
         </div>
 
-        <div class="hidden-xs section-miui-animated-productimg"></div>
+        <div class="section-miui-animated-productimg"></div>
 
 
         <div class="row">
