@@ -22,23 +22,27 @@ p{
   line-height: 1.87em;
   text-align: justify;
 }
+
+@keyframes auto-height-animation {
+  from{
+    transform: scale(1,0);
+  }
+  to{
+    transform: scale(1,1);
+  }
+}
+
 /*Header*/
 /*Navbar Top*/
 .navbar-top-container{
   background-color: black;
 }
 
-/*.nav1bar{
-  margin: 0;
-  background: transparent;
-  border-color: transparent;
-}*/
-
 .navbar-top-navlink-divider::before{
   content: "";
   position: absolute;
   top: 13px;
-  left: 10px;
+  left: 0;
   background: #424242;
   width: 1px;
   height: 14px;
@@ -48,7 +52,7 @@ p{
   content: "";
   position: absolute;
   top: 13px;
-  right: 10px;
+  right: 0;
   background: #424242;
   width: 1px;
   height: 14px;
@@ -79,7 +83,6 @@ p{
 
 .navbar-top-cart-dropdown:hover .navbar-top-cart-dropdown-menu{
   display: block;
-  animation: cart-dropdown-menu-auto-height 1.5s ease;
 }
 
 .navbar-top-cart-dropdown-menu{
@@ -92,15 +95,8 @@ p{
   text-align: center;
   border-radius: 0;
   transition: all 1s ease;
-}
-
-@keyframes cart-dropdown-menu-auto-height {
-  from{
-    height: 0;
-  }
-  to{
-    height: 94px;
-  }
+  transform-origin: 100% 0;
+  animation: auto-height-animation 1s ease;
 }
 
 /*Navbar Middle*/
@@ -132,7 +128,7 @@ p{
   padding: 20px 0 20px 60px;
 }
 
-.navbar-middle-navcontent .navbar-middle-navlink:hover{
+.navbar-middle-navlink:hover{
   cursor: default;
   color: orange;
 }
@@ -147,21 +143,10 @@ p{
   top: 122px;
   left: 0;
   width: 100%;
-  height: 242px;
+  min-height: 242px;
+  transform-origin: 100% 0;
+  animation: auto-height-animation .3s ease;
 }
-
-/*.navbar-middle-navlink:hover,.navbar-middle-product-exhibit{
-  animation: navbar-middle-product-exhibit-auto-height 1s ease;
-}
-
-@keyframes navbar-middle-product-exhibit-auto-height {
-  from{
-    height: 0;
-  }
-  to{
-    height: 242px;
-  }
-}*/
 
 .navbar-middle-product-exhibit a:hover,.navbar-middle-product-exhibit a{
   font-size: 1.3em;
@@ -185,6 +170,7 @@ p{
 /*Navbar Bottom*/
 .navbar-bottom-container{
   background: #f5f5f5;
+  transform-origin: 100% 0;
 }
 
 .navbar-bottom-nav-container{
@@ -208,7 +194,6 @@ p{
   color: white;
   padding: 6px 12px
 }
-
 
 /*Header Bottom*/
 .header-bottom-container{
@@ -241,6 +226,10 @@ p{
   line-height: 1.87em
 }
 
+.header-bottom-price-content{
+  position: relative;
+}
+
 .header-bottom-price-content h1 i{
   padding: 0 10px 0 0;
   font-size: .5em
@@ -251,12 +240,9 @@ p{
   font-size: .9em
 }
 
-.divider{
-  width: 1%;
-  padding: 0;
-  margin: 0;
-  border-color: #cdcdcd;
-  min-height: 130px;
+.header-bottom-price-content-divider{
+  border-right: 1px solid #c3c3c3;
+
 }
 
 /*Summary Section*/
@@ -372,24 +358,28 @@ p{
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-summary-04-3s.png?v=20170802) no-repeat center;
 }
 
-/*Section 2*/
-.sec2-bgimg{
+/*Performance Section*/
+.section-performance-container{
   min-height: 1150px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-performance-mi3s.jpg?v=20170802) #fafafa no-repeat center bottom;
 }
 
-.sec2-content{
+.section-performance-content{
   padding: 0 10px;
   margin: 180px auto 50px;
   max-width: 800px;
   min-height: 245px;
 }
 
-.sec2-content h3,.sec2-content p{
+.section-performance-content h3,.section-performance-content p{
   text-align: center;
 }
 
 /*Demo Section*/
+.section-demo-container{
+  background: black;
+}
+
 .section-demo-content{
   padding: 170px 0 80px 0;
   background: black
@@ -545,13 +535,13 @@ p{
   background: #403f85;
 }
 
-/*Section 5*/
-.sec5-bgimg{
+/*Finger Section*/
+.section-finger-container{
   min-height: 1039px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-finger-bg.jpg?v=20170802) no-repeat 125% bottom;
 }
 
-.sec5-content{
+.section-finger-content{
   padding: 0 10px;
   margin: 290px 0 0;
   max-width: 425px;
@@ -597,23 +587,23 @@ p{
 }
 
 /*Section 7*/
-.sec7-bgimg{
+.section-4g-container{
   min-height: 840px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-4g-3s.jpg?v=20170802) no-repeat 50% bottom
 }
 
-.sec7-content{
+.section-4g-content{
   padding: 0 10px;
   max-width: 372px;
   min-height: 265px;
   margin: 280px 0 0;
 }
 
-.sec7-content h3{
+.section-4g-content h3{
   text-align: center;
 }
 
-.sec7-content hr{
+.section-4g-content hr{
   margin: 40px auto 20px;
   width: 100px;
   border-color: rgba(0,0,0,0.3);
@@ -676,20 +666,25 @@ p{
 }
 
 .section-miui-productimg{
+  display: block;
+  margin: 0 auto;
   max-width: 362px;
   min-height: 692px;
   transition: all 1s;
 }
 
 
-/*Section 10*/
-.sec10-content{
-  padding: 130px 0 0;
-  min-height: 741px;
+/*Version Section*/
+.section-version-caontainer{
   background: #fafafa
 }
 
-.sec10-content i{
+.section-version-content{
+  padding: 130px 0 0;
+  min-height: 741px;
+}
+
+.section-version-content i{
   margin: 0 auto;
   display: block;
   max-width: 340px;
@@ -697,39 +692,48 @@ p{
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-verson-01.jpg?v=20170802) no-repeat;
 }
 
-.sec10-content h3{
+.section-version-content h3{
   font-size: 160%;
   text-align: center;
 }
 
-.sec10-content p{
+.section-version-content p{
   font-size: 110%;
   text-align: center;
 }
 
-/*Section 11*/
-.sec11-bgimg{
-  min-height: 360px;
-  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-next-bg.jpg?v=20170802) no-repeat 25% bottom #f5f5f5;
+/*Next Section*/
+.section-next-container{
+  background: #f5f5f5
 }
 
-.sec11-content h3{
+.section-next-bgimg{
+  min-height: 360px;
+  background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-next-bg.jpg?v=20170802) no-repeat 25% bottom;
+}
+
+.section-next-content h3{
   margin: 0 0 20px;
 }
 
-.sec11-content p{
+.section-next-content p{
   font-size: 110%;
   color: #757575
 }
 
-.sec11-content{
+.section-next-content{
   padding: 10px;
   margin-top: 100px;
   max-width: 380px;
   min-height: 212px;
 }
 
-.sec11-pg p{
+.section-next-foot-note{
+  min-height: 184px;
+  background: white
+}
+
+.section-next-foot-note p{
   text-align: justify;
   padding: 0 10px;
   margin: 50px auto;
@@ -739,28 +743,18 @@ p{
   font-size: 83%;
 }
 
-/*Section 12*/
-.sec12{
+/*Support Section*/
+.section-support-container{
   background: #f5f5f5;
   min-height: 305px;
   padding: 0;
 }
 
-.sec12-content1{
+.section-support-services-content{
   margin: 100px 0 0 ;
   padding: 20px 0;
   background: white;
 }
-
-/*.sec12-content1 ul{
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-}
-
-.sec12-content1 ul li:nth-of-type(2){
-  margin: 0 40px;
-}*/
 
 .txt-sm{
   padding: 5px 0;
@@ -774,34 +768,29 @@ p{
   color: #424242
 }
 
-.sec12-content1 strong{
+.section-support-services-content strong{
   display: block;
   color: #424242
 }
 
 
-.sec12-content2{
+.section-support-social-content{
   padding: 40px 0;
 }
 
-/*.sec12-content2,.sec12-content2 span{
-  display: flex;
-  flex-direction: row;
-}
-*/
-.sec12-content2 h3{
+.section-support-social-content h3{
   margin: 0;
   font-weight: bold;
   font-size: 120%
 }
 
-.sec12-content2 p{
+.section-support-social-content p{
   font-size: 85%
 }
 
-.sec12-content2 input{
+.section-support-social-content input{
   padding: 0 0 0 20px;
-  width: 260px;
+  width: 250px;
   height: 40px;
   outline: none;
   border: 1px solid #e0e0e0;
@@ -825,14 +814,6 @@ p{
   font-size: 130%
 }
 
-/*.sec12-content2 span div{
-  margin: 0 30px
-}
-
-.sec12-content2 span{
-  margin: 0 30px;
-}
-*/
 .social-media{
   padding: 20px 0 0
 }
@@ -942,14 +923,14 @@ footer h3{
     font-size: 85%;
   }
 
-  .sec12-content2{
+  .section-support-social-content{
     text-align: center;
   }
-  .sec12-content2 p{
+  .section-support-social-content p{
     text-align: center;
   }
 
-  .sec12-content2 input{
+  .section-support-social-content input{
     width: 185px;
   }
 }
@@ -961,11 +942,11 @@ footer h3{
 }
 
 @media screen and (max-width: 768px) {
-  .sec2-bgimg{
+  .section-performance-container{
     background-size: 75%;
   }
 
-  .sec2-content p{
+  .section-performance-content p{
     text-align: justify;
   }
 
@@ -991,12 +972,12 @@ footer h3{
     background-position: 0 80%;
   }
 
-  .sec7-bgimg{
+  .section-4g-container{
     background-size: 400%;
     background-position: 60% bottom;
   }
 
-  .sec7-content{
+  .section-4g-content{
     margin: 50px 0 0;
   }
 
@@ -1013,11 +994,11 @@ footer h3{
   .txt-sm{
     font-size: 120%;
   }
-  .sec12-content2 h3{
+  .section-support-social-content h3{
     font-size: 140%;
   }
 
-  .sec12-content2 p{
+  .section-support-social-content p{
     font-size: 110%;
   }
 }
@@ -1060,7 +1041,7 @@ footer h3{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .sec7-bgimg{
+  .section-4g-container{
     background-position: 58% bottom;
   }
 
@@ -1082,16 +1063,16 @@ footer h3{
 }
 
 @media screen and (max-width: 1200px) {
-  .sec5-bgimg{
+  .section-finger-container{
     background-size: 90%;
     background-position: 190% bottom
   }
 
-  .sec11-bgimg{
+  .section-next-bgimg{
     background-position: 5% bottom;
   }
 
-  .sec11-content,.sec11-content p{
+  .section-next-content,.section-next-content p{
     color: #e53935;
   }
 }
