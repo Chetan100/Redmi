@@ -121,16 +121,19 @@ p{
   z-index: 10;
 }
 
-.navbar-middle-navcontent>li>a{
+.navbar-middle-container .navbar-middle-navcontent li a{
   color: #616161;
   font-size: .9em;
   font-weight: bold;
   padding: 20px 0 20px 60px;
 }
 
-.navbar-middle-navlink:hover{
+.navbar-middle-container .navbar-middle-navcontent li a:hover{
+    color: orange;
+}
+
+.navbar-middle-container .navbar-middle-navcontent .navbar-middle-navlink:hover{
   cursor: default;
-  color: orange;
 }
 
 .navbar-middle-product-exhibit{
@@ -166,6 +169,9 @@ p{
   margin: 0 auto;
 }
 
+.navbar-middle-container:hover,.navbar-middle-product-exhibit:hover{
+    display: block;
+}
 
 /*Navbar Bottom*/
 .navbar-bottom-container{
@@ -174,18 +180,19 @@ p{
 }
 
 .navbar-bottom-nav-container{
-  color: #333;
   margin: 5px 20px;
   background: transparent;
   border-color:transparent
 }
 
-.navbar-bottom-navlink{
+.navbar-bottom-container .navbar-bottom-nav-container .navbar-bottom-navlink{
   font-size: .9em;
+  color: #333;
 }
 
-.navbar-bottom-logo{
+.navbar-bottom-container .navbar-bottom-logo{
   margin: 0;
+  color: #333;
   font-size: 1.5em;
 }
 
@@ -226,9 +233,6 @@ p{
   line-height: 1.87em
 }
 
-.header-bottom-price-content{
-  position: relative;
-}
 
 .header-bottom-price-content h1 i{
   padding: 0 10px 0 0;
@@ -241,8 +245,10 @@ p{
 }
 
 .header-bottom-price-content-divider{
-  border-right: 1px solid #c3c3c3;
-
+    margin: 20px 30px 0 0;
+    width: 1px;
+    height: 100px;
+    background: #c3c3c3;
 }
 
 /*Summary Section*/
@@ -420,7 +426,7 @@ p{
   padding: 0 10px;
   text-align: justify;
   max-width: 360px;
-  margin: 170px auto 0;
+  margin: 85px auto 0;
 }
 
 .section-demo-slides-video{
@@ -432,13 +438,13 @@ p{
 .section-demo-slides-video video{
   margin: 0 0 0 -100px;
   width: 960px;
+  max-width: 100%;
   height: auto;
 }
 
 .section-demo-slider-nav-prev,.section-demo-slider-nav-next{
   display: block;
   position: absolute;
-  left: 0;
   top: 45%;
   font-size: 2.5em;
   text-decoration: none;
@@ -460,7 +466,7 @@ p{
 }
 
 .section-demo-slider-nav-next{
-  left: 95%;
+  right: 0;
 }
 
 .section-demo-navlink:focus{
@@ -561,6 +567,7 @@ p{
   left: 25.9%;
   z-index: 5;
   width: 47.5%;
+  max-width: 100%;
   height: 34%;
   background: rgba(255,255,255,.8);
   transition: all 1.5s;
@@ -708,6 +715,7 @@ p{
 }
 
 .section-next-bgimg{
+  cursor: pointer;
   min-height: 360px;
   background: url(http://i01.appmifile.com/webfile/globalimg/en/goods/hongmi3s/overall-next-bg.jpg?v=20170802) no-repeat 25% bottom;
 }
@@ -913,9 +921,20 @@ footer h3{
   .section-miui-productimg{
     max-width: 300px;
   }
+
+  .section-support-services-content{
+      font-size: 98%;
+  }
 }
 
 @media screen and (max-width: 425px) {
+    .navbar-top-navlink{
+        font-size: 60%;
+    }
+
+    .header-bottom-price-content-divider{
+        margin-right: 20px;
+    }
 
   .txt-sm{
     width: 320px;
@@ -942,6 +961,12 @@ footer h3{
 }
 
 @media screen and (max-width: 768px) {
+
+    .header-bottom-price-content{
+        font-size: 80%;
+    }
+
+
   .section-performance-container{
     background-size: 75%;
   }
@@ -1029,22 +1054,12 @@ footer h3{
   .section-demo-content{
     padding: 60px 0 ;
   }
-
-  .section-demo-slides-content{
-    margin: 80px auto;
-  }
-
-  .section-demo-slides-video video{
-    max-width: 100%;
-    margin: 0;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .section-4g-container{
     background-position: 58% bottom;
   }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1265px) {
@@ -1052,13 +1067,25 @@ footer h3{
     margin: 12px 0;
   }
 
-  .navbar-middle-container{
-    /*margin: 0;*/
-  }
-
-  .navbar-middle-navcontent>li>a{
+  .navbar-middle-container .navbar-middle-navcontent li a{
     font-size: .7em;
     padding: 10px 12px;
+  }
+
+  .section-summary-mi5-white{
+      background-size: 100%;
+  }
+
+  .section-summary-mi5-black{
+      background-size: 100%;
+  }
+
+  .section-summary-mi5-brown{
+      background-size: 100%;
+  }
+
+  .section-summary-mi5-grey{
+      background-size: 100%;
   }
 }
 
